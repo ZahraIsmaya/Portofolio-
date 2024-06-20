@@ -1,0 +1,144 @@
+html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding: 1rem 2rem;
+}
+
+.left-container {
+    width: 300px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    position: fixed;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.left-container.open {
+    transform: translateX(0);
+}
+
+.left-container.closed {
+    transform: translateX(-100%);
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2000;
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .open-btn {
+        display: block; 
+    }
+    .left-container {
+        transform: translateX(-100%);
+    }
+    .left-container.open {
+        transform: translateX(0);
+    }
+}
+
+
+.right-container{
+    top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
+    transition: margin-left 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .right-container {
+        margin-left: 0;
+    }
+    .right-container.left-open {
+        margin-left: 300px;
+    }
+}
+
+.photo-profile {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+button {
+    width: 70%;
+    background-color: #009688;
+    border-radius: 10px;
+    margin: 12px !important;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+button .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+button:hover {
+    background-color: #074f48;
+    color: #f1f1f1;
+}
+
+.cv-btn {
+    background-color: #333;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cv-btn:hover {
+    background-color: #555;
+}
+
+.cravebuddy-container {
+    display: flex;
+    align-items: center;
+}
+
+.cravebuddy-image {
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.cravebuddy-description {
+    max-width: 50%;
+}
+
