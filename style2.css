@@ -21,7 +21,8 @@ body {
     flex-direction: column;
     left: 0;
     top: 0;
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
     transition: transform 0.3s;
     z-index: 1000;
 }
