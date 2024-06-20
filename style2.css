@@ -17,7 +17,7 @@ body {
     background-color: #f0f0f0;
     overflow-y: auto; /* Pastikan overflow-y diatur ke auto */
     display: flex;
-    align-items: flex-start; /* Ubah align-items ke flex-start untuk menghindari masalah penempatan konten */
+    align-items:center; /* Ubah align-items ke flex-start untuk menghindari masalah penempatan konten */
     flex-direction: column;
     left: 0;
     top: 0;
